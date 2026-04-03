@@ -1,56 +1,37 @@
 # 🚢 RF Man Overboard Alert System
 
-![Project Banner](images/diagram.png)
+## 📌 Overview
+Arduino-based RF system to detect signal loss and trigger alarm.
 
----
+## 🧩 Components
+- Arduino UNO/Nano
+- 433MHz RF Tx/Rx (HR433A)
+- LEDs (Red & Green)
+- Buzzer
+- Resistors (220Ω)
 
-##  Project Overview
-This project is a **wireless safety system** designed to detect a "Man Overboard" condition using RF communication.
+## ⚙️ Working
+- Transmitter sends signal every 2 sec
+- Receiver checks signal
+- If no signal → Buzzer ON + Red LED
+- If signal present → Green LED ON
 
-When the transmitter signal is lost, the system immediately triggers an alert using a buzzer and LED indicators.
-
----
-
-##  Objectives
-- Detect signal loss in real-time
-- Provide instant alert (buzzer + LED)
-- Ensure safety monitoring in marine environments
-
----
-
-##  Components Used
-
-| Component | Quantity |
-|----------|--------|
-| Arduino UNO/Nano | 2 |
-| 433 MHz RF Module (HR433A) | 1 Tx + 1 Rx |
-| LEDs (Red, Green) | 2 |
-| Buzzer | 1 |
-| Resistors (220Ω) | 2 |
-| Battery | 1 |
-
----
-
-##  Working Principle
-
-1. Transmitter sends signal every 2 seconds  
-2. Receiver continuously monitors signal  
-3. If signal is lost:
-   - 🔴 Red LED ON  
-   - 🔔 Buzzer ON  
-4. If signal present:
-   - 🟢 Green LED ON  
-
----
-
-## 🔌 Circuit Diagram
-
-![Circuit Diagram](images/diagram.png)
-
----
-
-## 💻 Code
+## 🔌 Connections
 
 ### Transmitter
-```cpp
-// (your code here)
+- DATA → D12
+- VCC → 5V
+- GND → GND
+
+### Receiver
+- DATA → D11
+- Green LED → D7
+- Red LED → D6
+- Buzzer → D8
+
+## 📡 Range
+- Without antenna: ~0.5m
+- With antenna: up to 100m
+
+## 👨‍💻 Author
+Satyam Jha
