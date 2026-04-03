@@ -34,4 +34,4 @@ Arduino-based RF system to detect signal loss and trigger alarm.
 - With antenna: up to 100m
 
 ## 👨‍💻 Author
-Satyam Jha
+Kumar Satyam
